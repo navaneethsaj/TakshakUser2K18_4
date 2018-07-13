@@ -1,0 +1,18 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    tools:context="takshak.mace.takshak2k18.WorkshopFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ListView
+        android:layout_marginTop="6dp"
+        android:id="@+id/listviewWorkshop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </ListView>
+
+
+</FrameLayout>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:background="@color/colorPrimaryDark"
+            android:layout_width="match_parent"
+            android:elevation="4dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <View
+                android:layout_width="40dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/white"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/delius_swash_caps"
+                android:shadowColor="@color/login_back"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="5"
+                android:text="Suggest Songs"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+            <View
+                android:layout_width="40dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/white"/>
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_marginHorizontal="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent">
+            <LinearLayout
+                android:id="@+id/songtitlelayout"
+                android:layout_margin="6dp"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="6dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_marginTop="15dp"
+                    android:paddingHorizontal="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/vesper_libre"
+                    android:text="Song Title"
+                    android:textColor="@color/mytextcolor"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:paddingHorizontal="10dp"
+                    android:id="@+id/songtitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/vesper_libre"
+                    android:hint="Required"
+                    android:textColor="@color/mytextcolor"
+                    android:textColorHint="@color/hintcolor"
+                    android:layout_marginBottom="15dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:elevation="6dp"
+                android:id="@+id/songmorelayout"
+                android:layout_below="@+id/songtitlelayout"
+                android:orientation="vertical"
+                android:layout_margin="6dp"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:id="@+id/songartistlayout"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_marginTop="15dp"
+                        android:paddingHorizontal="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/vesper_libre"
+                        android:text="Song Artist"
+                        android:textColor="@color/mytextcolor"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:paddingHorizontal="10dp"
+                        android:id="@+id/songartist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/vesper_libre"
+                        android:hint="Optional"
+                        android:textColor="@color/mytextcolor"
+                        android:textColorHint="@color/hintcolor"
+                        android:layout_marginBottom="15dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/vesper_libre"
+                        android:paddingHorizontal="10dp"
+                        android:text="Movie/Genre"
+                        android:textColor="@color/mytextcolor"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/songmovie"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp"
+                        android:fontFamily="@font/vesper_libre"
+                        android:hint="Optional"
+                        android:paddingHorizontal="10dp"
+                        android:textColor="@color/mytextcolor"
+                        android:textColorHint="@color/hintcolor" />
+                </LinearLayout>
+            </LinearLayout>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/sendsongbutton"
+                android:layout_margin="8dp"
+                android:layout_below="@id/songmorelayout"
+                android:background="@color/colorPrimary"
+                android:text="Request Song"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/login"
+                android:layout_margin="8dp"
+                android:layout_below="@id/sendsongbutton"
+                android:background="@color/colorPrimary"
+                android:text="Login"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</ScrollView>
