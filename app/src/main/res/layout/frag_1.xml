@@ -46,6 +46,23 @@
                 android:layout_marginRight="10dp"
                 android:background="@color/white"/>
         </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/servicegolive"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/vesper_libre"
+                android:text="Service go live on takshak day"
+                android:textAlignment="center" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/timeremaining"/>
+        </LinearLayout>
         <RelativeLayout
             android:layout_marginHorizontal="10dp"
             android:layout_width="match_parent"

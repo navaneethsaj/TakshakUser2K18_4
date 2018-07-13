@@ -19,6 +19,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -28,6 +29,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 import java.io.IOException;
+import java.util.Calendar;
 import java.util.concurrent.TimeUnit;
 
 import okhttp3.OkHttpClient;
@@ -134,6 +136,7 @@ public class Tab1 extends Fragment {
 
     String UserPREFERENCES = "userinfo";
     final String USERID = "usserid";
+    TextView remaining;
     SharedPreferences sharedpreferences;
 
     @Override
@@ -146,6 +149,30 @@ public class Tab1 extends Fragment {
 
         sharedpreferences = getActivity().getSharedPreferences(UserPREFERENCES, Context.MODE_PRIVATE);
         editor = sharedpreferences.edit();
+        remaining = view.findViewById(R.id.timeremaining);
+        remaining.setVisibility(View.GONE);
+
+
+
+
+
+
+        long takshakTimestamp = 1531486629;
+
+
+
+
+
+        long now = System.currentTimeMillis()/1000;
+        Log.d("tak", String.valueOf(takshakTimestamp));
+        Log.d("now", String.valueOf(now));
+        TextView servicegolive = view.findViewById(R.id.servicegolive);
+        //if ()
+        //remaining.setText("Service go live on Takshak2k18 day");
+        /*int takshakTimeStamp = 1531655779;
+
+        int now = (int) (System.currentTimeMillis()/1000);
+        remaining.setText(Integer.toString(GetDifference(now,takshakTimeStamp)));*/
 
         /*FirebaseUser currentUser = mAuth.getCurrentUser();
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getContext());
@@ -227,7 +254,23 @@ public class Tab1 extends Fragment {
 
             }
         });
-
+        if (now > takshakTimestamp){
+            sendsong.setEnabled(true);
+            title.setEnabled(true);
+            artist.setEnabled(true);
+            servicegolive.setVisibility(View.GONE);
+            movie_genre.setEnabled(true);
+        }else {
+            title.setEnabled(false);
+            artist.setEnabled(false);
+            movie_genre.setEnabled(false);
+            sendsong.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Toast.makeText(getActivity(),"Service go live on takshak day",Toast.LENGTH_SHORT).show();
+                }
+            });
+        }
     }
     class SongAsyncTask extends AsyncTask<String,Void,String >{
 
@@ -302,5 +345,21 @@ public class Tab1 extends Fragment {
             login.setEnabled(false);
             login.setVisibility(View.GONE);
         }
+    }
+    public int GetDifference(long start,long end){
+        Calendar cal = Calendar.getInstance();
+        cal.setTimeInMillis(start);
+        int hour = cal.get(Calendar.HOUR_OF_DAY);
+        int min = cal.get(Calendar.MINUTE);
+        long t=(23-hour)*3600000+(59-min)*60000;
+
+        t=start+t;
+
+        int diff=0;
+        if(end>t){
+            diff=(int)((end-t)/ TimeUnit.DAYS.toMillis(1))+1;
+        }
+
+        return  diff;
     }
 }
