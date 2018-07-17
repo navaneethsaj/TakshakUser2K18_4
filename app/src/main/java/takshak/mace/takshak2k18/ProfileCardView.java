@@ -72,13 +72,13 @@ public class ProfileCardView extends AppCompatActivity {
         }
 
         //url += sharedpreferences.getString(USERID,"NOID");
-        url += "1006";
+        ;
         if (sharedpreferences.getString(USERID,null) != null && sharedpreferences.getString(MOBILENO,null) !=null){
             ConnectivityManager conMgr = (ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);
             if ( conMgr.getNetworkInfo(ConnectivityManager.TYPE_MOBILE).getState() == NetworkInfo.State.CONNECTED
                     || conMgr.getNetworkInfo(ConnectivityManager.TYPE_WIFI).getState() == NetworkInfo.State.CONNECTED ) {
                 // notify user you are online
-                new RankAsyncTask().execute(url);
+                new RankAsyncTask().execute(url += "1006");
             }
             else if ( conMgr.getNetworkInfo(ConnectivityManager.TYPE_MOBILE).getState() == NetworkInfo.State.DISCONNECTED
                     || conMgr.getNetworkInfo(ConnectivityManager.TYPE_WIFI).getState() == NetworkInfo.State.DISCONNECTED) {

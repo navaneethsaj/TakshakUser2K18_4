@@ -47,6 +47,7 @@ public class profile extends AppCompatActivity {
                 || conMgr.getNetworkInfo(ConnectivityManager.TYPE_WIFI).getState() == NetworkInfo.State.CONNECTED ) {
 
             // notify user you are online
+            Log.d("connectivity","Connected");
             new MyAsyncTask().execute(url);
 
         }
@@ -71,6 +72,7 @@ public class profile extends AppCompatActivity {
             Response response = null;
             try {
                 response = client.newCall(request).execute();
+                Log.d("body","ok");
                 return response.body().string();
             } catch (IOException e) {
                 e.printStackTrace();
@@ -83,6 +85,7 @@ public class profile extends AppCompatActivity {
         protected void onPostExecute(String s) {
             super.onPostExecute(s);
             if (s != null){
+                Log.d("resp","not null");
                 notificationBox.setVisibility(View.VISIBLE);
                 notificationBox.setText(s);
                 editor.putString("message",s);

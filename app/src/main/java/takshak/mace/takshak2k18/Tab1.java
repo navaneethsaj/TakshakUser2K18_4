@@ -45,7 +45,7 @@ public class Tab1 extends Fragment {
 
     Button sendsong;
     Button login;
-    EditText title,artist,movie_genre;
+    EditText title,moreinfo;
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
@@ -144,8 +144,7 @@ public class Tab1 extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         sendsong = view.findViewById(R.id.sendsongbutton);
         title = view.findViewById(R.id.songtitle);
-        artist = view.findViewById(R.id.songartist);
-        movie_genre = view.findViewById(R.id.songmovie);
+        moreinfo = view.findViewById(R.id.moreinfo);
 
         sharedpreferences = getActivity().getSharedPreferences(UserPREFERENCES, Context.MODE_PRIVATE);
         editor = sharedpreferences.edit();
@@ -257,13 +256,11 @@ public class Tab1 extends Fragment {
         if (now > takshakTimestamp){
             sendsong.setEnabled(true);
             title.setEnabled(true);
-            artist.setEnabled(true);
             servicegolive.setVisibility(View.GONE);
-            movie_genre.setEnabled(true);
+            moreinfo.setEnabled(true);
         }else {
             title.setEnabled(false);
-            artist.setEnabled(false);
-            movie_genre.setEnabled(false);
+            moreinfo.setEnabled(false);
             sendsong.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -280,8 +277,17 @@ public class Tab1 extends Fragment {
                     .readTimeout(4, TimeUnit.SECONDS)
                     .writeTimeout(4,TimeUnit.SECONDS)
                     .connectTimeout(4,TimeUnit.SECONDS).build();
-            url = url + "id=" + sharedpreferences.getString(USERID, null) + "&title=" + title.getText().toString() + "&artist=" + artist.getText().toString() + "&movie=" + movie_genre.getText().toString();
+            String tit = title.getText().toString();
+            String userid = sharedpreferences.getString(USERID, null);
+            String more = moreinfo.getText().toString();
+            //url = url + "id=" + sharedpreferences.getString(USERID, null) + "&title=" +  + "&artist=noValue" + "&movie=" + movie_genre.getText().toString();
             //url = "https://us-central1-takshakapp18.cloudfunctions.net/requestsong?id=1001&title=baby&artist=null&movie=null";
+
+            url = "https://us-central1-takshakapp18.cloudfunctions.net/requestsong?"+
+                    "id="+userid+
+                    "&title="+tit+
+                    "&moreinfo="+more;
+
             Request request = new Request.Builder()
                     .url(url)
                     .build();
@@ -311,8 +317,7 @@ public class Tab1 extends Fragment {
         protected void onPostExecute(String res) {
             super.onPostExecute(res);
             title.setText("");
-            artist.setText("");
-            movie_genre.setText("");
+            moreinfo.setText("");
             sendsong.setEnabled(true);
             sendsong.setText("Request song");
             if (res != null){

@@ -99,7 +99,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     SharedPreferences sharedpreferences;
     SharedPreferences.Editor editor;
 
-    String url = "https://demo1275613.mockable.io/login?";
+    String URL = "https://demo1275613.mockable.io/login?";
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
@@ -129,7 +129,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         mEmailSignInButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                url = url+"emailid="+mEmailView.getText()+"&pass="+mPasswordView.getText();
+                String url = URL+"emailid="+mEmailView.getText()+"&pass="+mPasswordView.getText();
                 url = url.replace("@","%40");
                 ConnectivityManager conMgr = (ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);
 
