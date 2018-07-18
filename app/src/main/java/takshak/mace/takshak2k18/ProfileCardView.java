@@ -72,13 +72,12 @@ public class ProfileCardView extends AppCompatActivity {
         }
 
         //url += sharedpreferences.getString(USERID,"NOID");
-        ;
         if (sharedpreferences.getString(USERID,null) != null && sharedpreferences.getString(MOBILENO,null) !=null){
             ConnectivityManager conMgr = (ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);
             if ( conMgr.getNetworkInfo(ConnectivityManager.TYPE_MOBILE).getState() == NetworkInfo.State.CONNECTED
                     || conMgr.getNetworkInfo(ConnectivityManager.TYPE_WIFI).getState() == NetworkInfo.State.CONNECTED ) {
                 // notify user you are online
-                new RankAsyncTask().execute(url += "1006");
+                new RankAsyncTask().execute(url + sharedpreferences.getString(USERID,"NOID"));
             }
             else if ( conMgr.getNetworkInfo(ConnectivityManager.TYPE_MOBILE).getState() == NetworkInfo.State.DISCONNECTED
                     || conMgr.getNetworkInfo(ConnectivityManager.TYPE_WIFI).getState() == NetworkInfo.State.DISCONNECTED) {
@@ -129,5 +128,11 @@ public class ProfileCardView extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(),"Request timed out",Toast.LENGTH_SHORT).show();
             }
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
     }
 }

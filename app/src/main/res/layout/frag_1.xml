@@ -13,7 +13,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <LinearLayout
-            android:background="@color/colorPrimaryDark"
+            android:layout_marginTop="4dp"
+            android:background="@color/colorPrimary"
             android:layout_width="match_parent"
             android:elevation="4dp"
             android:layout_height="wrap_content"
@@ -30,7 +31,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/delius_swash_caps"
+                android:fontFamily="@font/vesper_libre"
                 android:shadowColor="@color/login_back"
                 android:shadowDx="0"
                 android:shadowDy="0"
@@ -61,15 +62,15 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:visibility="gone"
                 android:id="@+id/timeremaining"/>
         </LinearLayout>
         <RelativeLayout
-            android:layout_marginHorizontal="10dp"
             android:layout_width="match_parent"
             android:layout_height="fill_parent">
             <LinearLayout
                 android:id="@+id/songtitlelayout"
-                android:layout_margin="6dp"
+                android:layout_margin="10dp"
                 android:background="@color/white"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -102,7 +103,7 @@
                 android:id="@+id/songmorelayout"
                 android:layout_below="@+id/songtitlelayout"
                 android:orientation="vertical"
-                android:layout_margin="6dp"
+                android:layout_margin="10dp"
                 android:background="@color/white"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -142,6 +143,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/sendsongbutton"
+                android:fontFamily="@font/vesper_libre"
                 android:layout_margin="8dp"
                 android:layout_below="@id/songmorelayout"
                 android:background="@color/colorPrimary"
@@ -150,6 +152,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/login"
+                android:fontFamily="@font/vesper_libre"
                 android:layout_margin="8dp"
                 android:layout_below="@id/sendsongbutton"
                 android:background="@color/colorPrimary"

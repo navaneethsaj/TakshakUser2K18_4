@@ -15,5 +15,5 @@
     <color name="background_material_light">#ffffff</color>
     <color name="colorBackground">#ffffff</color>
     <color name="foreground_material_light">#ffffff</color>
-    <color name="dividercolor">#cacaca</color>
+    <color name="dividercolor">#FF7F50</color>
 </resources>
