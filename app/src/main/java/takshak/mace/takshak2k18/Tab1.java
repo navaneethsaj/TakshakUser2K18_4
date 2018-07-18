@@ -50,6 +50,8 @@ public class Tab1 extends Fragment {
     private String mParam1;
     private String mParam2;
     String SONGREQCOUNT = "reqcount";
+
+    public final String NAME = "username";
     SharedPreferences.Editor editor;
 
     String url = "https://us-central1-takshakapp18.cloudfunctions.net/requestsong?";
@@ -278,7 +280,7 @@ public class Tab1 extends Fragment {
                     .writeTimeout(4,TimeUnit.SECONDS)
                     .connectTimeout(4,TimeUnit.SECONDS).build();
             String tit = title.getText().toString();
-            String userid = sharedpreferences.getString(USERID, null);
+            String userid = sharedpreferences.getString(USERID, null)+"__"+sharedpreferences.getString(NAME,null);
             String more = moreinfo.getText().toString();
             //url = url + "id=" + sharedpreferences.getString(USERID, null) + "&title=" +  + "&artist=noValue" + "&movie=" + movie_genre.getText().toString();
             //url = "https://us-central1-takshakapp18.cloudfunctions.net/requestsong?id=1001&title=baby&artist=null&movie=null";
@@ -349,6 +351,10 @@ public class Tab1 extends Fragment {
         }else {
             login.setEnabled(false);
             login.setVisibility(View.GONE);
+        }
+        if (sharedpreferences.getInt(SONGREQCOUNT,5) <= 0){
+            sendsong.setEnabled(false);
+            sendsong.setText("REQUEST QUOTA EXCEEDED");
         }
     }
     public int GetDifference(long start,long end){
