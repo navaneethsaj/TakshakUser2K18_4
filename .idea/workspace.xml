@@ -13,7 +13,7 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a673a4c4-7671-4628-b86a-900ef3670081" name="Default" comment="registration button only added. Not connected to server">
+    <list default="true" id="a673a4c4-7671-4628-b86a-900ef3670081" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" />
@@ -22,11 +22,10 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/takshak/mace/takshak2k18/ProfileCardView.java" afterPath="$PROJECT_DIR$/app/src/main/java/takshak/mace/takshak2k18/ProfileCardView.java" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/takshak/mace/takshak2k18/WorkShopEventAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/takshak/mace/takshak2k18/WorkShopEventAdapter.java" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/event_item_layout.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/event_item_layout.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_workshop.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_workshop.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -49,14 +48,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="event_item_layout.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/event_item_layout.xml">
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
+      <file leaf-file-name="ProfileCardView.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/takshak/mace/takshak2k18/ProfileCardView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="5" column="17" lean-forward="true" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+            <state relative-caret-position="462">
+              <caret line="126" column="30" lean-forward="false" selection-start-line="126" selection-start-column="30" selection-end-line="126" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -65,19 +61,23 @@
       <file leaf-file-name="LoginActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/takshak/mace/takshak2k18/LoginActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="149" column="44" lean-forward="false" selection-start-line="149" selection-start-column="44" selection-end-line="149" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProfileCardView.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/takshak/mace/takshak2k18/ProfileCardView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1110">
-              <caret line="113" column="0" lean-forward="false" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="477">
+              <caret line="199" column="57" lean-forward="false" selection-start-line="199" selection-start-column="57" selection-end-line="199" selection-end-column="57" />
+              <folding>
+                <element signature="e#4294#5407#0" expanded="true" />
+                <element signature="e#5406#5407#0" expanded="true" />
+                <element signature="e#8864#8893#0" expanded="true" />
+                <element signature="e#8975#9297#0" expanded="true" />
+                <element signature="e#9296#9297#0" expanded="true" />
+                <element signature="e#10778#10820#0" expanded="true" />
+                <element signature="e#11016#11056#0" expanded="true" />
+                <element signature="e#11197#11236#0" expanded="true" />
+                <element signature="e#12798#13035#0" expanded="true" />
+                <element signature="e#13034#13035#0" expanded="true" />
+                <element signature="e#13229#13465#0" expanded="true" />
+                <element signature="e#13464#13465#0" expanded="true" />
+                <element signature="e#17150#17194#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -2128,10 +2128,11 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_profile.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/frag_1.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/takshak/mace/takshak2k18/WorkShopEventAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_workshop.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/takshak/mace/takshak2k18/ProfileCardView.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/takshak/mace/takshak2k18/WorkShopEventAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/event_item_layout.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/takshak/mace/takshak2k18/ProfileCardView.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/takshak/mace/takshak2k18/LoginActivity.java" />
       </list>
     </option>
   </component>
@@ -2202,7 +2203,7 @@
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="settings.editor.selected.configurable" value="android.sdk-updates" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="device.picker.selection" value="Pixel_2_API_27" />
+    <property name="device.picker.selection" value="e109d802" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -2381,6 +2382,14 @@
       <option name="presentableId" value="Default" />
       <updated>1531920925996</updated>
     </task>
+    <task id="LOCAL-00001" summary="registration button only added. Not connected to server">
+      <created>1531994765765</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1531994765765</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -2397,14 +2406,14 @@
       <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3293124" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293124" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32973558" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32973558" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293124" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293124" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3293124" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24986508" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -2457,10 +2466,10 @@
         <state relative-caret-position="1407">
           <caret line="67" column="63" lean-forward="false" selection-start-line="67" selection-start-column="63" selection-end-line="67" selection-end-column="63" />
           <folding>
-            <element signature="e#4228#4490#0" expanded="false" />
-            <element signature="e#4489#4490#0" expanded="false" />
-            <element signature="e#4551#4803#0" expanded="false" />
-            <element signature="e#4802#4803#0" expanded="false" />
+            <element signature="e#4395#4657#0" expanded="false" />
+            <element signature="e#4656#4657#0" expanded="false" />
+            <element signature="e#4718#4970#0" expanded="false" />
+            <element signature="e#4969#4970#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2615,19 +2624,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/takshak/mace/takshak2k18/WorkShopEventAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="519">
-          <caret line="100" column="51" lean-forward="false" selection-start-line="100" selection-start-column="51" selection-end-line="100" selection-end-column="51" />
-          <folding>
-            <element signature="e#4228#4490#0" expanded="false" />
-            <element signature="e#4489#4490#0" expanded="false" />
-            <element signature="e#4551#4803#0" expanded="false" />
-            <element signature="e#4802#4803#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/takshak/mace/takshak2k18/MyPagerAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -2652,18 +2648,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/takshak/mace/takshak2k18/ProfileCardView.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/takshak/mace/takshak2k18/WorkShopEventAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1110">
-          <caret line="113" column="0" lean-forward="false" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/takshak/mace/takshak2k18/LoginActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="149" column="44" lean-forward="false" selection-start-line="149" selection-start-column="44" selection-end-line="149" selection-end-column="44" />
+        <state relative-caret-position="169">
+          <caret line="83" column="27" lean-forward="false" selection-start-line="83" selection-start-column="27" selection-end-line="83" selection-end-column="27" />
           <folding />
         </state>
       </provider>
@@ -2673,8 +2661,38 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="17" lean-forward="true" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        <state relative-caret-position="301">
+          <caret line="124" column="35" lean-forward="false" selection-start-line="124" selection-start-column="35" selection-end-line="124" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/takshak/mace/takshak2k18/LoginActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="477">
+          <caret line="199" column="57" lean-forward="false" selection-start-line="199" selection-start-column="57" selection-end-line="199" selection-end-column="57" />
+          <folding>
+            <element signature="e#4294#5407#0" expanded="true" />
+            <element signature="e#5406#5407#0" expanded="true" />
+            <element signature="e#8864#8893#0" expanded="true" />
+            <element signature="e#8975#9297#0" expanded="true" />
+            <element signature="e#9296#9297#0" expanded="true" />
+            <element signature="e#10778#10820#0" expanded="true" />
+            <element signature="e#11016#11056#0" expanded="true" />
+            <element signature="e#11197#11236#0" expanded="true" />
+            <element signature="e#12798#13035#0" expanded="true" />
+            <element signature="e#13034#13035#0" expanded="true" />
+            <element signature="e#13229#13465#0" expanded="true" />
+            <element signature="e#13464#13465#0" expanded="true" />
+            <element signature="e#17150#17194#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/takshak/mace/takshak2k18/ProfileCardView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="126" column="30" lean-forward="false" selection-start-line="126" selection-start-column="30" selection-end-line="126" selection-end-column="30" />
           <folding />
         </state>
       </provider>

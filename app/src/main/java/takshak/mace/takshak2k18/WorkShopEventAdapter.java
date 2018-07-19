@@ -59,6 +59,7 @@ public class WorkShopEventAdapter extends ArrayAdapter<EventObject> {
 
         final ImageView imageView = (ImageView) v.findViewById(R.id.eventImage);
         final ImageView expandImg = v.findViewById(R.id.expandicon);
+        final TextView knowmore = v.findViewById(R.id.knowmore);
 
         final LinearLayout linearLayout = v.findViewById(R.id.moreinfo);
         LinearLayout item = v.findViewById(R.id.itemlayout);
@@ -79,6 +80,7 @@ public class WorkShopEventAdapter extends ArrayAdapter<EventObject> {
             public void onClick(View view) {
                 if (!expanded){
                     expandImg.setImageResource(R.drawable.arrowup);
+                    knowmore.setText("show less");
                     linearLayout.setVisibility(View.VISIBLE);
                     imageView.getLayoutParams().width =(int) (200 * getContext().getResources().getDisplayMetrics().density);
                     imageView.getLayoutParams().height =(int) (200 * getContext().getResources().getDisplayMetrics().density);
@@ -87,6 +89,7 @@ public class WorkShopEventAdapter extends ArrayAdapter<EventObject> {
                 }else {
                     expandImg.setImageResource(R.drawable.arrowdown);
                     linearLayout.setVisibility(View.GONE);
+                    knowmore.setText("show more");
                     imageView.getLayoutParams().width =(int) (110 * getContext().getResources().getDisplayMetrics().density);
                     imageView.getLayoutParams().height =(int) (110 * getContext().getResources().getDisplayMetrics().density);
                     expanded = false;

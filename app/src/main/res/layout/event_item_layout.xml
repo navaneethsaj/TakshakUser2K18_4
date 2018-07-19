@@ -116,13 +116,13 @@
                 android:text="REGISTER FOR EVENT" />
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/knowmore"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@+id/eventImage"
                 android:layout_toStartOf="@+id/expandicon"
                 android:fontFamily="@font/vesper_libre"
-                android:text="know more"
+                android:text="show  more"
                 android:textColor="@color/textcolor" />
         </RelativeLayout>
 
