@@ -4,12 +4,12 @@
     android:orientation="vertical"
     android:layout_height="match_parent">
     <LinearLayout
-        android:background="@color/colorPrimary"
         android:id="@+id/itemlayout"
         android:orientation="vertical"
         android:padding="2dp"
         android:elevation="4dp"
         android:layout_margin="4dp"
+        android:background="@color/white"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -24,33 +24,31 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
-                android:layout_marginTop="26dp"
                 android:layout_toEndOf="@+id/eventImage"
                 android:fontFamily="serif"
                 android:paddingLeft="4dp"
                 android:text="EventName"
                 android:textAppearance="@android:style/TextAppearance.Material.Subhead"
-                android:textColor="@color/white"
+                android:textColor="@color/textcolor"
                 android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/eventCategory"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
                 android:layout_alignStart="@+id/eventName"
-                android:layout_marginTop="55dp"
+                android:layout_below="@+id/eventName"
                 android:fontFamily="casual"
                 android:paddingLeft="4dp"
                 android:text="Adventure"
                 android:textAppearance="@android:style/TextAppearance.Material.Subhead"
-                android:textColor="@color/white"
+                android:textColor="@color/textcolor"
                 android:textSize="18sp" />
 
             <ImageView
                 android:id="@+id/eventImage"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:padding="4dp"
@@ -79,13 +77,9 @@
                     android:fontFamily="@font/abhaya_libre_medium"
                     android:padding="4dp"
                     android:text="G001"
-                    android:textColor="@color/white"
+                    android:textColor="@color/textcolor"
                     android:textSize="16sp" />
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="REGISTER"/>
 
                 <TextView
                     android:id="@+id/eventDept"
@@ -94,7 +88,7 @@
                     android:fontFamily="@font/abhaya_libre_medium"
                     android:padding="4dp"
                     android:text="Computer Science"
-                    android:textColor="@color/white"
+                    android:textColor="@color/textcolor"
                     android:textSize="16sp" />
 
                 <TextView
@@ -104,9 +98,32 @@
                     android:fontFamily="@font/abhaya_libre_medium"
                     android:padding="4dp"
                     android:text="This is the desciption of the event"
-                    android:textColor="@color/white"
+                    android:textColor="@color/textcolor"
                     android:textSize="16sp" />
             </LinearLayout>
+
+            <Button
+                android:id="@+id/register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/eventName"
+                android:layout_below="@+id/eventCategory"
+                android:background="@color/colorPrimary"
+                android:fontFamily="@font/vesper_libre"
+                android:gravity="center"
+                android:paddingHorizontal="4dp"
+                android:layout_marginLeft="4dp"
+                android:text="REGISTER FOR EVENT" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/eventImage"
+                android:layout_toStartOf="@+id/expandicon"
+                android:fontFamily="@font/vesper_libre"
+                android:text="know more"
+                android:textColor="@color/textcolor" />
         </RelativeLayout>
 
     </LinearLayout>
